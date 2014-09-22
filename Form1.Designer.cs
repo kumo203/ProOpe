@@ -168,36 +168,45 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.PatternTxt = new System.Windows.Forms.TextBox();
+            this.PatternReadBtn = new System.Windows.Forms.Button();
+            this.PatternWriteBtn = new System.Windows.Forms.Button();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.label4 = new System.Windows.Forms.Label();
+            this.numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNode
             // 
-            this.txtNode.Location = new System.Drawing.Point(49, 12);
+            this.txtNode.Location = new System.Drawing.Point(49, 11);
             this.txtNode.Name = "txtNode";
-            this.txtNode.Size = new System.Drawing.Size(150, 20);
+            this.txtNode.Size = new System.Drawing.Size(150, 19);
             this.txtNode.TabIndex = 0;
             this.txtNode.Text = "localhost";
             // 
             // cmbServerList
             // 
             this.cmbServerList.FormattingEnabled = true;
-            this.cmbServerList.Location = new System.Drawing.Point(13, 39);
+            this.cmbServerList.Location = new System.Drawing.Point(13, 36);
             this.cmbServerList.Name = "cmbServerList";
-            this.cmbServerList.Size = new System.Drawing.Size(186, 21);
+            this.cmbServerList.Size = new System.Drawing.Size(186, 20);
             this.cmbServerList.TabIndex = 1;
             this.cmbServerList.Text = "Takebishi.Dxp";
             // 
             // btnConnect
             // 
-            this.btnConnect.Location = new System.Drawing.Point(206, 39);
+            this.btnConnect.Location = new System.Drawing.Point(206, 36);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(75, 22);
+            this.btnConnect.Size = new System.Drawing.Size(75, 20);
             this.btnConnect.TabIndex = 2;
             this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = true;
@@ -205,9 +214,9 @@
             // 
             // btnListRefresh
             // 
-            this.btnListRefresh.Location = new System.Drawing.Point(206, 10);
+            this.btnListRefresh.Location = new System.Drawing.Point(206, 9);
             this.btnListRefresh.Name = "btnListRefresh";
-            this.btnListRefresh.Size = new System.Drawing.Size(75, 25);
+            this.btnListRefresh.Size = new System.Drawing.Size(75, 23);
             this.btnListRefresh.TabIndex = 3;
             this.btnListRefresh.Text = "Refresh";
             this.btnListRefresh.UseVisualStyleBackColor = true;
@@ -215,9 +224,9 @@
             // 
             // btnDisconnect
             // 
-            this.btnDisconnect.Location = new System.Drawing.Point(206, 67);
+            this.btnDisconnect.Location = new System.Drawing.Point(206, 62);
             this.btnDisconnect.Name = "btnDisconnect";
-            this.btnDisconnect.Size = new System.Drawing.Size(75, 23);
+            this.btnDisconnect.Size = new System.Drawing.Size(75, 21);
             this.btnDisconnect.TabIndex = 4;
             this.btnDisconnect.Text = "Disconnect";
             this.btnDisconnect.UseVisualStyleBackColor = true;
@@ -226,9 +235,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(12, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(31, 12);
             this.label1.TabIndex = 17;
             this.label1.Text = "Node";
             // 
@@ -240,9 +249,9 @@
             this.panel1.Controls.Add(this.btnDisconnect);
             this.panel1.Controls.Add(this.btnConnect);
             this.panel1.Controls.Add(this.btnListRefresh);
-            this.panel1.Location = new System.Drawing.Point(12, 403);
+            this.panel1.Location = new System.Drawing.Point(74, 402);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(289, 100);
+            this.panel1.Size = new System.Drawing.Size(289, 92);
             this.panel1.TabIndex = 18;
             this.panel1.Visible = false;
             // 
@@ -250,9 +259,9 @@
             // 
             this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.tableLayoutPanel1);
-            this.panel2.Location = new System.Drawing.Point(33, 35);
+            this.panel2.Location = new System.Drawing.Point(35, 79);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(416, 315);
+            this.panel2.Size = new System.Drawing.Size(420, 291);
             this.panel2.TabIndex = 19;
             // 
             // tableLayoutPanel1
@@ -264,7 +273,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
             this.tableLayoutPanel1.Controls.Add(this.PauseCmb20, 5, 19);
             this.tableLayoutPanel1.Controls.Add(this.PauseCmb19, 5, 18);
             this.tableLayoutPanel1.Controls.Add(this.PauseCmb18, 5, 17);
@@ -388,280 +397,299 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 20;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(391, 564);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(396, 521);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // PauseCmb20
             // 
             this.PauseCmb20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb20.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb20.FormattingEnabled = true;
             this.PauseCmb20.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb20.Location = new System.Drawing.Point(334, 536);
+            this.PauseCmb20.Location = new System.Drawing.Point(332, 498);
             this.PauseCmb20.Name = "PauseCmb20";
-            this.PauseCmb20.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb20.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb20.TabIndex = 195;
             // 
             // PauseCmb19
             // 
             this.PauseCmb19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb19.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb19.FormattingEnabled = true;
             this.PauseCmb19.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb19.Location = new System.Drawing.Point(334, 508);
+            this.PauseCmb19.Location = new System.Drawing.Point(332, 472);
             this.PauseCmb19.Name = "PauseCmb19";
-            this.PauseCmb19.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb19.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb19.TabIndex = 185;
             // 
             // PauseCmb18
             // 
             this.PauseCmb18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb18.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb18.FormattingEnabled = true;
             this.PauseCmb18.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb18.Location = new System.Drawing.Point(334, 480);
+            this.PauseCmb18.Location = new System.Drawing.Point(332, 446);
             this.PauseCmb18.Name = "PauseCmb18";
-            this.PauseCmb18.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb18.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb18.TabIndex = 175;
             // 
             // PauseCmb17
             // 
             this.PauseCmb17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb17.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb17.FormattingEnabled = true;
             this.PauseCmb17.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb17.Location = new System.Drawing.Point(334, 452);
+            this.PauseCmb17.Location = new System.Drawing.Point(332, 420);
             this.PauseCmb17.Name = "PauseCmb17";
-            this.PauseCmb17.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb17.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb17.TabIndex = 165;
             // 
             // PauseCmb16
             // 
             this.PauseCmb16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb16.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb16.FormattingEnabled = true;
             this.PauseCmb16.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb16.Location = new System.Drawing.Point(334, 424);
+            this.PauseCmb16.Location = new System.Drawing.Point(332, 394);
             this.PauseCmb16.Name = "PauseCmb16";
-            this.PauseCmb16.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb16.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb16.TabIndex = 155;
             // 
             // PauseCmb15
             // 
             this.PauseCmb15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb15.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb15.FormattingEnabled = true;
             this.PauseCmb15.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb15.Location = new System.Drawing.Point(334, 396);
+            this.PauseCmb15.Location = new System.Drawing.Point(332, 368);
             this.PauseCmb15.Name = "PauseCmb15";
-            this.PauseCmb15.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb15.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb15.TabIndex = 145;
             // 
             // PauseCmb14
             // 
             this.PauseCmb14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb14.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb14.FormattingEnabled = true;
             this.PauseCmb14.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb14.Location = new System.Drawing.Point(334, 368);
+            this.PauseCmb14.Location = new System.Drawing.Point(332, 342);
             this.PauseCmb14.Name = "PauseCmb14";
-            this.PauseCmb14.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb14.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb14.TabIndex = 135;
             // 
             // PauseCmb13
             // 
             this.PauseCmb13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb13.FormattingEnabled = true;
             this.PauseCmb13.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb13.Location = new System.Drawing.Point(334, 340);
+            this.PauseCmb13.Location = new System.Drawing.Point(332, 316);
             this.PauseCmb13.Name = "PauseCmb13";
-            this.PauseCmb13.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb13.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb13.TabIndex = 125;
             // 
             // PauseCmb12
             // 
             this.PauseCmb12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb12.FormattingEnabled = true;
             this.PauseCmb12.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb12.Location = new System.Drawing.Point(334, 312);
+            this.PauseCmb12.Location = new System.Drawing.Point(332, 290);
             this.PauseCmb12.Name = "PauseCmb12";
-            this.PauseCmb12.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb12.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb12.TabIndex = 115;
             // 
             // PauseCmb11
             // 
             this.PauseCmb11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb11.FormattingEnabled = true;
             this.PauseCmb11.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb11.Location = new System.Drawing.Point(334, 284);
+            this.PauseCmb11.Location = new System.Drawing.Point(332, 264);
             this.PauseCmb11.Name = "PauseCmb11";
-            this.PauseCmb11.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb11.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb11.TabIndex = 105;
             // 
             // PauseCmb10
             // 
             this.PauseCmb10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb10.FormattingEnabled = true;
             this.PauseCmb10.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb10.Location = new System.Drawing.Point(334, 256);
+            this.PauseCmb10.Location = new System.Drawing.Point(332, 238);
             this.PauseCmb10.Name = "PauseCmb10";
-            this.PauseCmb10.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb10.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb10.TabIndex = 95;
             // 
             // PauseCmb9
             // 
             this.PauseCmb9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb9.FormattingEnabled = true;
             this.PauseCmb9.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb9.Location = new System.Drawing.Point(334, 228);
+            this.PauseCmb9.Location = new System.Drawing.Point(332, 212);
             this.PauseCmb9.Name = "PauseCmb9";
-            this.PauseCmb9.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb9.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb9.TabIndex = 85;
             // 
             // PauseCmb8
             // 
             this.PauseCmb8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb8.FormattingEnabled = true;
             this.PauseCmb8.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb8.Location = new System.Drawing.Point(334, 200);
+            this.PauseCmb8.Location = new System.Drawing.Point(332, 186);
             this.PauseCmb8.Name = "PauseCmb8";
-            this.PauseCmb8.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb8.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb8.TabIndex = 75;
             // 
             // PauseCmb7
             // 
             this.PauseCmb7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb7.FormattingEnabled = true;
             this.PauseCmb7.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb7.Location = new System.Drawing.Point(334, 172);
+            this.PauseCmb7.Location = new System.Drawing.Point(332, 160);
             this.PauseCmb7.Name = "PauseCmb7";
-            this.PauseCmb7.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb7.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb7.TabIndex = 65;
             // 
             // PauseCmb6
             // 
             this.PauseCmb6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb6.FormattingEnabled = true;
             this.PauseCmb6.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb6.Location = new System.Drawing.Point(334, 144);
+            this.PauseCmb6.Location = new System.Drawing.Point(332, 134);
             this.PauseCmb6.Name = "PauseCmb6";
-            this.PauseCmb6.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb6.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb6.TabIndex = 55;
             // 
             // PauseCmb5
             // 
             this.PauseCmb5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb5.FormattingEnabled = true;
             this.PauseCmb5.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb5.Location = new System.Drawing.Point(334, 116);
+            this.PauseCmb5.Location = new System.Drawing.Point(332, 108);
             this.PauseCmb5.Name = "PauseCmb5";
-            this.PauseCmb5.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb5.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb5.TabIndex = 45;
             // 
             // PauseCmb4
             // 
             this.PauseCmb4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb4.FormattingEnabled = true;
             this.PauseCmb4.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb4.Location = new System.Drawing.Point(334, 88);
+            this.PauseCmb4.Location = new System.Drawing.Point(332, 82);
             this.PauseCmb4.Name = "PauseCmb4";
-            this.PauseCmb4.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb4.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb4.TabIndex = 35;
             // 
             // PauseCmb3
             // 
             this.PauseCmb3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb3.FormattingEnabled = true;
             this.PauseCmb3.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb3.Location = new System.Drawing.Point(334, 60);
+            this.PauseCmb3.Location = new System.Drawing.Point(332, 56);
             this.PauseCmb3.Name = "PauseCmb3";
-            this.PauseCmb3.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb3.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb3.TabIndex = 25;
             // 
             // PauseCmb2
             // 
             this.PauseCmb2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb2.FormattingEnabled = true;
             this.PauseCmb2.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb2.Location = new System.Drawing.Point(334, 32);
+            this.PauseCmb2.Location = new System.Drawing.Point(332, 30);
             this.PauseCmb2.Name = "PauseCmb2";
-            this.PauseCmb2.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb2.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb2.TabIndex = 15;
             // 
             // MstTxt20
             // 
             this.MstTxt20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt20.Location = new System.Drawing.Point(111, 536);
+            this.MstTxt20.Location = new System.Drawing.Point(109, 498);
             this.MstTxt20.Name = "MstTxt20";
-            this.MstTxt20.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt20.Size = new System.Drawing.Size(74, 19);
             this.MstTxt20.TabIndex = 192;
             // 
             // TmpTxt10
             // 
             this.TmpTxt10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt10.Location = new System.Drawing.Point(30, 256);
+            this.TmpTxt10.Location = new System.Drawing.Point(28, 238);
             this.TmpTxt10.Name = "TmpTxt10";
-            this.TmpTxt10.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt10.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt10.TabIndex = 91;
             // 
             // label14
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(4, 372);
+            this.label14.Location = new System.Drawing.Point(4, 345);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(19, 13);
+            this.label14.Size = new System.Drawing.Size(17, 12);
             this.label14.TabIndex = 15;
             this.label14.Text = "14";
             // 
@@ -669,9 +697,9 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 232);
+            this.label7.Location = new System.Drawing.Point(7, 215);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(13, 13);
+            this.label7.Size = new System.Drawing.Size(11, 12);
             this.label7.TabIndex = 14;
             this.label7.Text = "9";
             // 
@@ -679,9 +707,9 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 36);
+            this.label6.Location = new System.Drawing.Point(7, 33);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 13);
+            this.label6.Size = new System.Drawing.Size(11, 12);
             this.label6.TabIndex = 10;
             this.label6.Text = "2";
             // 
@@ -689,19 +717,19 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 8);
+            this.label5.Location = new System.Drawing.Point(7, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 13);
+            this.label5.Size = new System.Drawing.Size(11, 12);
             this.label5.TabIndex = 6;
             this.label5.Text = "1";
             // 
             // MstTxt1
             // 
             this.MstTxt1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt1.Location = new System.Drawing.Point(111, 4);
+            this.MstTxt1.Location = new System.Drawing.Point(109, 4);
             this.MstTxt1.Name = "MstTxt1";
             this.MstTxt1.ReadOnly = true;
-            this.MstTxt1.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt1.Size = new System.Drawing.Size(74, 19);
             this.MstTxt1.TabIndex = 2;
             this.MstTxt1.TabStop = false;
             this.MstTxt1.Text = "設定不可";
@@ -710,34 +738,34 @@
             // TmpTxt2
             // 
             this.TmpTxt2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt2.Location = new System.Drawing.Point(30, 32);
+            this.TmpTxt2.Location = new System.Drawing.Point(28, 30);
             this.TmpTxt2.Name = "TmpTxt2";
-            this.TmpTxt2.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt2.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt2.TabIndex = 11;
             // 
             // MstTxt2
             // 
             this.MstTxt2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt2.Location = new System.Drawing.Point(111, 32);
+            this.MstTxt2.Location = new System.Drawing.Point(109, 30);
             this.MstTxt2.Name = "MstTxt2";
-            this.MstTxt2.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt2.Size = new System.Drawing.Size(74, 19);
             this.MstTxt2.TabIndex = 12;
             // 
             // TmpTxt1
             // 
             this.TmpTxt1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt1.Location = new System.Drawing.Point(30, 4);
+            this.TmpTxt1.Location = new System.Drawing.Point(28, 4);
             this.TmpTxt1.Name = "TmpTxt1";
-            this.TmpTxt1.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt1.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt1.TabIndex = 1;
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 64);
+            this.label8.Location = new System.Drawing.Point(7, 59);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(13, 13);
+            this.label8.Size = new System.Drawing.Size(11, 12);
             this.label8.TabIndex = 14;
             this.label8.Text = "3";
             // 
@@ -745,9 +773,9 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 92);
+            this.label9.Location = new System.Drawing.Point(7, 85);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(13, 13);
+            this.label9.Size = new System.Drawing.Size(11, 12);
             this.label9.TabIndex = 14;
             this.label9.Text = "4";
             // 
@@ -755,9 +783,9 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 120);
+            this.label10.Location = new System.Drawing.Point(7, 111);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(13, 13);
+            this.label10.Size = new System.Drawing.Size(11, 12);
             this.label10.TabIndex = 14;
             this.label10.Text = "5";
             // 
@@ -765,9 +793,9 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(7, 148);
+            this.label11.Location = new System.Drawing.Point(7, 137);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(13, 13);
+            this.label11.Size = new System.Drawing.Size(11, 12);
             this.label11.TabIndex = 14;
             this.label11.Text = "6";
             // 
@@ -775,9 +803,9 @@
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(7, 176);
+            this.label12.Location = new System.Drawing.Point(7, 163);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(13, 13);
+            this.label12.Size = new System.Drawing.Size(11, 12);
             this.label12.TabIndex = 14;
             this.label12.Text = "7";
             // 
@@ -785,131 +813,131 @@
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(7, 204);
+            this.label13.Location = new System.Drawing.Point(7, 189);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(13, 13);
+            this.label13.Size = new System.Drawing.Size(11, 12);
             this.label13.TabIndex = 14;
             this.label13.Text = "8";
             // 
             // TmpTxt3
             // 
             this.TmpTxt3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt3.Location = new System.Drawing.Point(30, 60);
+            this.TmpTxt3.Location = new System.Drawing.Point(28, 56);
             this.TmpTxt3.Name = "TmpTxt3";
-            this.TmpTxt3.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt3.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt3.TabIndex = 21;
             // 
             // TmpTxt4
             // 
             this.TmpTxt4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt4.Location = new System.Drawing.Point(30, 88);
+            this.TmpTxt4.Location = new System.Drawing.Point(28, 82);
             this.TmpTxt4.Name = "TmpTxt4";
-            this.TmpTxt4.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt4.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt4.TabIndex = 31;
             // 
             // TmpTxt5
             // 
             this.TmpTxt5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt5.Location = new System.Drawing.Point(30, 116);
+            this.TmpTxt5.Location = new System.Drawing.Point(28, 108);
             this.TmpTxt5.Name = "TmpTxt5";
-            this.TmpTxt5.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt5.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt5.TabIndex = 41;
             // 
             // TmpTxt6
             // 
             this.TmpTxt6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt6.Location = new System.Drawing.Point(30, 144);
+            this.TmpTxt6.Location = new System.Drawing.Point(28, 134);
             this.TmpTxt6.Name = "TmpTxt6";
-            this.TmpTxt6.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt6.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt6.TabIndex = 51;
             // 
             // TmpTxt7
             // 
             this.TmpTxt7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt7.Location = new System.Drawing.Point(30, 172);
+            this.TmpTxt7.Location = new System.Drawing.Point(28, 160);
             this.TmpTxt7.Name = "TmpTxt7";
-            this.TmpTxt7.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt7.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt7.TabIndex = 61;
             // 
             // TmpTxt8
             // 
             this.TmpTxt8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt8.Location = new System.Drawing.Point(30, 200);
+            this.TmpTxt8.Location = new System.Drawing.Point(28, 186);
             this.TmpTxt8.Name = "TmpTxt8";
-            this.TmpTxt8.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt8.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt8.TabIndex = 71;
             // 
             // TmpTxt9
             // 
             this.TmpTxt9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt9.Location = new System.Drawing.Point(30, 228);
+            this.TmpTxt9.Location = new System.Drawing.Point(28, 212);
             this.TmpTxt9.Name = "TmpTxt9";
-            this.TmpTxt9.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt9.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt9.TabIndex = 81;
             // 
             // MstTxt3
             // 
             this.MstTxt3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt3.Location = new System.Drawing.Point(111, 60);
+            this.MstTxt3.Location = new System.Drawing.Point(109, 56);
             this.MstTxt3.Name = "MstTxt3";
-            this.MstTxt3.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt3.Size = new System.Drawing.Size(74, 19);
             this.MstTxt3.TabIndex = 22;
             // 
             // MstTxt4
             // 
             this.MstTxt4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt4.Location = new System.Drawing.Point(111, 88);
+            this.MstTxt4.Location = new System.Drawing.Point(109, 82);
             this.MstTxt4.Name = "MstTxt4";
-            this.MstTxt4.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt4.Size = new System.Drawing.Size(74, 19);
             this.MstTxt4.TabIndex = 32;
             // 
             // MstTxt6
             // 
             this.MstTxt6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt6.Location = new System.Drawing.Point(111, 144);
+            this.MstTxt6.Location = new System.Drawing.Point(109, 134);
             this.MstTxt6.Name = "MstTxt6";
-            this.MstTxt6.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt6.Size = new System.Drawing.Size(74, 19);
             this.MstTxt6.TabIndex = 52;
             // 
             // MstTxt5
             // 
             this.MstTxt5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt5.Location = new System.Drawing.Point(111, 116);
+            this.MstTxt5.Location = new System.Drawing.Point(109, 108);
             this.MstTxt5.Name = "MstTxt5";
-            this.MstTxt5.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt5.Size = new System.Drawing.Size(74, 19);
             this.MstTxt5.TabIndex = 42;
             // 
             // MstTxt7
             // 
             this.MstTxt7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt7.Location = new System.Drawing.Point(111, 172);
+            this.MstTxt7.Location = new System.Drawing.Point(109, 160);
             this.MstTxt7.Name = "MstTxt7";
-            this.MstTxt7.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt7.Size = new System.Drawing.Size(74, 19);
             this.MstTxt7.TabIndex = 62;
             // 
             // MstTxt8
             // 
             this.MstTxt8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt8.Location = new System.Drawing.Point(111, 200);
+            this.MstTxt8.Location = new System.Drawing.Point(109, 186);
             this.MstTxt8.Name = "MstTxt8";
-            this.MstTxt8.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt8.Size = new System.Drawing.Size(74, 19);
             this.MstTxt8.TabIndex = 72;
             // 
             // MstTxt9
             // 
             this.MstTxt9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt9.Location = new System.Drawing.Point(111, 228);
+            this.MstTxt9.Location = new System.Drawing.Point(109, 212);
             this.MstTxt9.Name = "MstTxt9";
-            this.MstTxt9.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt9.Size = new System.Drawing.Size(74, 19);
             this.MstTxt9.TabIndex = 82;
             // 
             // label15
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(4, 344);
+            this.label15.Location = new System.Drawing.Point(4, 319);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(19, 13);
+            this.label15.Size = new System.Drawing.Size(17, 12);
             this.label15.TabIndex = 15;
             this.label15.Text = "13";
             // 
@@ -917,9 +945,9 @@
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(4, 316);
+            this.label16.Location = new System.Drawing.Point(4, 293);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(19, 13);
+            this.label16.Size = new System.Drawing.Size(17, 12);
             this.label16.TabIndex = 15;
             this.label16.Text = "12";
             // 
@@ -927,9 +955,9 @@
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(4, 288);
+            this.label17.Location = new System.Drawing.Point(4, 267);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(19, 13);
+            this.label17.Size = new System.Drawing.Size(17, 12);
             this.label17.TabIndex = 15;
             this.label17.Text = "11";
             // 
@@ -937,9 +965,9 @@
             // 
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(4, 260);
+            this.label18.Location = new System.Drawing.Point(4, 241);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(19, 13);
+            this.label18.Size = new System.Drawing.Size(17, 12);
             this.label18.TabIndex = 15;
             this.label18.Text = "10";
             // 
@@ -947,9 +975,9 @@
             // 
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(4, 400);
+            this.label19.Location = new System.Drawing.Point(4, 371);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(19, 13);
+            this.label19.Size = new System.Drawing.Size(17, 12);
             this.label19.TabIndex = 15;
             this.label19.Text = "15";
             // 
@@ -957,9 +985,9 @@
             // 
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(4, 428);
+            this.label20.Location = new System.Drawing.Point(4, 397);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(19, 13);
+            this.label20.Size = new System.Drawing.Size(17, 12);
             this.label20.TabIndex = 15;
             this.label20.Text = "16";
             // 
@@ -967,9 +995,9 @@
             // 
             this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(4, 456);
+            this.label21.Location = new System.Drawing.Point(4, 423);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(19, 13);
+            this.label21.Size = new System.Drawing.Size(17, 12);
             this.label21.TabIndex = 15;
             this.label21.Text = "17";
             // 
@@ -977,9 +1005,9 @@
             // 
             this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(4, 484);
+            this.label22.Location = new System.Drawing.Point(4, 449);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(19, 13);
+            this.label22.Size = new System.Drawing.Size(17, 12);
             this.label22.TabIndex = 15;
             this.label22.Text = "18";
             // 
@@ -987,9 +1015,9 @@
             // 
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(4, 512);
+            this.label23.Location = new System.Drawing.Point(4, 475);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(19, 13);
+            this.label23.Size = new System.Drawing.Size(17, 12);
             this.label23.TabIndex = 15;
             this.label23.Text = "19";
             // 
@@ -997,170 +1025,170 @@
             // 
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(4, 541);
+            this.label24.Location = new System.Drawing.Point(4, 501);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(19, 13);
+            this.label24.Size = new System.Drawing.Size(17, 12);
             this.label24.TabIndex = 15;
             this.label24.Text = "20";
             // 
             // TmpTxt11
             // 
             this.TmpTxt11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt11.Location = new System.Drawing.Point(30, 284);
+            this.TmpTxt11.Location = new System.Drawing.Point(28, 264);
             this.TmpTxt11.Name = "TmpTxt11";
-            this.TmpTxt11.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt11.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt11.TabIndex = 101;
             // 
             // TmpTxt12
             // 
             this.TmpTxt12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt12.Location = new System.Drawing.Point(30, 312);
+            this.TmpTxt12.Location = new System.Drawing.Point(28, 290);
             this.TmpTxt12.Name = "TmpTxt12";
-            this.TmpTxt12.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt12.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt12.TabIndex = 111;
             // 
             // TmpTxt13
             // 
             this.TmpTxt13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt13.Location = new System.Drawing.Point(30, 340);
+            this.TmpTxt13.Location = new System.Drawing.Point(28, 316);
             this.TmpTxt13.Name = "TmpTxt13";
-            this.TmpTxt13.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt13.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt13.TabIndex = 121;
             // 
             // TmpTxt14
             // 
             this.TmpTxt14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt14.Location = new System.Drawing.Point(30, 368);
+            this.TmpTxt14.Location = new System.Drawing.Point(28, 342);
             this.TmpTxt14.Name = "TmpTxt14";
-            this.TmpTxt14.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt14.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt14.TabIndex = 131;
             // 
             // TmpTxt15
             // 
             this.TmpTxt15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt15.Location = new System.Drawing.Point(30, 396);
+            this.TmpTxt15.Location = new System.Drawing.Point(28, 368);
             this.TmpTxt15.Name = "TmpTxt15";
-            this.TmpTxt15.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt15.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt15.TabIndex = 141;
             // 
             // TmpTxt16
             // 
             this.TmpTxt16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt16.Location = new System.Drawing.Point(30, 424);
+            this.TmpTxt16.Location = new System.Drawing.Point(28, 394);
             this.TmpTxt16.Name = "TmpTxt16";
-            this.TmpTxt16.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt16.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt16.TabIndex = 151;
             // 
             // TmpTxt17
             // 
             this.TmpTxt17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt17.Location = new System.Drawing.Point(30, 452);
+            this.TmpTxt17.Location = new System.Drawing.Point(28, 420);
             this.TmpTxt17.Name = "TmpTxt17";
-            this.TmpTxt17.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt17.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt17.TabIndex = 161;
             // 
             // TmpTxt18
             // 
             this.TmpTxt18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt18.Location = new System.Drawing.Point(30, 480);
+            this.TmpTxt18.Location = new System.Drawing.Point(28, 446);
             this.TmpTxt18.Name = "TmpTxt18";
-            this.TmpTxt18.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt18.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt18.TabIndex = 171;
             // 
             // TmpTxt19
             // 
             this.TmpTxt19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt19.Location = new System.Drawing.Point(30, 508);
+            this.TmpTxt19.Location = new System.Drawing.Point(28, 472);
             this.TmpTxt19.Name = "TmpTxt19";
-            this.TmpTxt19.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt19.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt19.TabIndex = 181;
             // 
             // TmpTxt20
             // 
             this.TmpTxt20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TmpTxt20.Location = new System.Drawing.Point(30, 536);
+            this.TmpTxt20.Location = new System.Drawing.Point(28, 498);
             this.TmpTxt20.Name = "TmpTxt20";
-            this.TmpTxt20.Size = new System.Drawing.Size(74, 20);
+            this.TmpTxt20.Size = new System.Drawing.Size(74, 19);
             this.TmpTxt20.TabIndex = 191;
             // 
             // MstTxt19
             // 
             this.MstTxt19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt19.Location = new System.Drawing.Point(111, 508);
+            this.MstTxt19.Location = new System.Drawing.Point(109, 472);
             this.MstTxt19.Name = "MstTxt19";
-            this.MstTxt19.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt19.Size = new System.Drawing.Size(74, 19);
             this.MstTxt19.TabIndex = 182;
             // 
             // MstTxt18
             // 
             this.MstTxt18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt18.Location = new System.Drawing.Point(111, 480);
+            this.MstTxt18.Location = new System.Drawing.Point(109, 446);
             this.MstTxt18.Name = "MstTxt18";
-            this.MstTxt18.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt18.Size = new System.Drawing.Size(74, 19);
             this.MstTxt18.TabIndex = 172;
             // 
             // MstTxt17
             // 
             this.MstTxt17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt17.Location = new System.Drawing.Point(111, 452);
+            this.MstTxt17.Location = new System.Drawing.Point(109, 420);
             this.MstTxt17.Name = "MstTxt17";
-            this.MstTxt17.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt17.Size = new System.Drawing.Size(74, 19);
             this.MstTxt17.TabIndex = 162;
             // 
             // MstTxt16
             // 
             this.MstTxt16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt16.Location = new System.Drawing.Point(111, 424);
+            this.MstTxt16.Location = new System.Drawing.Point(109, 394);
             this.MstTxt16.Name = "MstTxt16";
-            this.MstTxt16.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt16.Size = new System.Drawing.Size(74, 19);
             this.MstTxt16.TabIndex = 152;
             // 
             // MstTxt15
             // 
             this.MstTxt15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt15.Location = new System.Drawing.Point(111, 396);
+            this.MstTxt15.Location = new System.Drawing.Point(109, 368);
             this.MstTxt15.Name = "MstTxt15";
-            this.MstTxt15.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt15.Size = new System.Drawing.Size(74, 19);
             this.MstTxt15.TabIndex = 142;
             // 
             // MstTxt14
             // 
             this.MstTxt14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt14.Location = new System.Drawing.Point(111, 368);
+            this.MstTxt14.Location = new System.Drawing.Point(109, 342);
             this.MstTxt14.Name = "MstTxt14";
-            this.MstTxt14.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt14.Size = new System.Drawing.Size(74, 19);
             this.MstTxt14.TabIndex = 132;
             // 
             // MstTxt13
             // 
             this.MstTxt13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt13.Location = new System.Drawing.Point(111, 340);
+            this.MstTxt13.Location = new System.Drawing.Point(109, 316);
             this.MstTxt13.Name = "MstTxt13";
-            this.MstTxt13.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt13.Size = new System.Drawing.Size(74, 19);
             this.MstTxt13.TabIndex = 122;
             // 
             // MstTxt12
             // 
             this.MstTxt12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt12.Location = new System.Drawing.Point(111, 312);
+            this.MstTxt12.Location = new System.Drawing.Point(109, 290);
             this.MstTxt12.Name = "MstTxt12";
-            this.MstTxt12.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt12.Size = new System.Drawing.Size(74, 19);
             this.MstTxt12.TabIndex = 112;
             // 
             // MstTxt11
             // 
             this.MstTxt11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt11.Location = new System.Drawing.Point(111, 284);
+            this.MstTxt11.Location = new System.Drawing.Point(109, 264);
             this.MstTxt11.Name = "MstTxt11";
-            this.MstTxt11.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt11.Size = new System.Drawing.Size(74, 19);
             this.MstTxt11.TabIndex = 102;
             // 
             // MstTxt10
             // 
             this.MstTxt10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MstTxt10.Location = new System.Drawing.Point(111, 256);
+            this.MstTxt10.Location = new System.Drawing.Point(109, 238);
             this.MstTxt10.Name = "MstTxt10";
-            this.MstTxt10.Size = new System.Drawing.Size(74, 20);
+            this.MstTxt10.Size = new System.Drawing.Size(74, 19);
             this.MstTxt10.TabIndex = 92;
             // 
             // UnitCmb1
@@ -1172,9 +1200,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb1.Location = new System.Drawing.Point(273, 4);
+            this.UnitCmb1.Location = new System.Drawing.Point(271, 4);
             this.UnitCmb1.Name = "UnitCmb1";
-            this.UnitCmb1.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb1.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb1.TabIndex = 4;
             // 
             // UnitCmb2
@@ -1186,9 +1214,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb2.Location = new System.Drawing.Point(273, 32);
+            this.UnitCmb2.Location = new System.Drawing.Point(271, 30);
             this.UnitCmb2.Name = "UnitCmb2";
-            this.UnitCmb2.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb2.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb2.TabIndex = 14;
             // 
             // UnitCmb3
@@ -1200,9 +1228,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb3.Location = new System.Drawing.Point(273, 60);
+            this.UnitCmb3.Location = new System.Drawing.Point(271, 56);
             this.UnitCmb3.Name = "UnitCmb3";
-            this.UnitCmb3.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb3.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb3.TabIndex = 24;
             // 
             // UnitCmb4
@@ -1214,9 +1242,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb4.Location = new System.Drawing.Point(273, 88);
+            this.UnitCmb4.Location = new System.Drawing.Point(271, 82);
             this.UnitCmb4.Name = "UnitCmb4";
-            this.UnitCmb4.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb4.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb4.TabIndex = 34;
             // 
             // UnitCmb5
@@ -1228,9 +1256,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb5.Location = new System.Drawing.Point(273, 116);
+            this.UnitCmb5.Location = new System.Drawing.Point(271, 108);
             this.UnitCmb5.Name = "UnitCmb5";
-            this.UnitCmb5.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb5.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb5.TabIndex = 44;
             // 
             // UnitCmb6
@@ -1242,9 +1270,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb6.Location = new System.Drawing.Point(273, 144);
+            this.UnitCmb6.Location = new System.Drawing.Point(271, 134);
             this.UnitCmb6.Name = "UnitCmb6";
-            this.UnitCmb6.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb6.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb6.TabIndex = 54;
             // 
             // UnitCmb7
@@ -1256,9 +1284,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb7.Location = new System.Drawing.Point(273, 172);
+            this.UnitCmb7.Location = new System.Drawing.Point(271, 160);
             this.UnitCmb7.Name = "UnitCmb7";
-            this.UnitCmb7.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb7.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb7.TabIndex = 64;
             // 
             // UnitCmb8
@@ -1270,9 +1298,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb8.Location = new System.Drawing.Point(273, 200);
+            this.UnitCmb8.Location = new System.Drawing.Point(271, 186);
             this.UnitCmb8.Name = "UnitCmb8";
-            this.UnitCmb8.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb8.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb8.TabIndex = 74;
             // 
             // UnitCmb9
@@ -1284,9 +1312,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb9.Location = new System.Drawing.Point(273, 228);
+            this.UnitCmb9.Location = new System.Drawing.Point(271, 212);
             this.UnitCmb9.Name = "UnitCmb9";
-            this.UnitCmb9.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb9.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb9.TabIndex = 84;
             // 
             // UnitCmb10
@@ -1298,9 +1326,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb10.Location = new System.Drawing.Point(273, 256);
+            this.UnitCmb10.Location = new System.Drawing.Point(271, 238);
             this.UnitCmb10.Name = "UnitCmb10";
-            this.UnitCmb10.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb10.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb10.TabIndex = 94;
             // 
             // UnitCmb11
@@ -1312,9 +1340,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb11.Location = new System.Drawing.Point(273, 284);
+            this.UnitCmb11.Location = new System.Drawing.Point(271, 264);
             this.UnitCmb11.Name = "UnitCmb11";
-            this.UnitCmb11.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb11.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb11.TabIndex = 104;
             // 
             // UnitCmb12
@@ -1326,9 +1354,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb12.Location = new System.Drawing.Point(273, 312);
+            this.UnitCmb12.Location = new System.Drawing.Point(271, 290);
             this.UnitCmb12.Name = "UnitCmb12";
-            this.UnitCmb12.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb12.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb12.TabIndex = 114;
             // 
             // UnitCmb13
@@ -1340,9 +1368,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb13.Location = new System.Drawing.Point(273, 340);
+            this.UnitCmb13.Location = new System.Drawing.Point(271, 316);
             this.UnitCmb13.Name = "UnitCmb13";
-            this.UnitCmb13.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb13.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb13.TabIndex = 124;
             // 
             // UnitCmb14
@@ -1354,9 +1382,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb14.Location = new System.Drawing.Point(273, 368);
+            this.UnitCmb14.Location = new System.Drawing.Point(271, 342);
             this.UnitCmb14.Name = "UnitCmb14";
-            this.UnitCmb14.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb14.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb14.TabIndex = 134;
             // 
             // UnitCmb15
@@ -1368,9 +1396,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb15.Location = new System.Drawing.Point(273, 396);
+            this.UnitCmb15.Location = new System.Drawing.Point(271, 368);
             this.UnitCmb15.Name = "UnitCmb15";
-            this.UnitCmb15.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb15.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb15.TabIndex = 144;
             // 
             // UnitCmb16
@@ -1382,9 +1410,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb16.Location = new System.Drawing.Point(273, 424);
+            this.UnitCmb16.Location = new System.Drawing.Point(271, 394);
             this.UnitCmb16.Name = "UnitCmb16";
-            this.UnitCmb16.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb16.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb16.TabIndex = 154;
             // 
             // UnitCmb17
@@ -1396,9 +1424,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb17.Location = new System.Drawing.Point(273, 452);
+            this.UnitCmb17.Location = new System.Drawing.Point(271, 420);
             this.UnitCmb17.Name = "UnitCmb17";
-            this.UnitCmb17.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb17.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb17.TabIndex = 164;
             // 
             // UnitCmb18
@@ -1410,9 +1438,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb18.Location = new System.Drawing.Point(273, 480);
+            this.UnitCmb18.Location = new System.Drawing.Point(271, 446);
             this.UnitCmb18.Name = "UnitCmb18";
-            this.UnitCmb18.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb18.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb18.TabIndex = 174;
             // 
             // UnitCmb19
@@ -1424,9 +1452,9 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb19.Location = new System.Drawing.Point(273, 508);
+            this.UnitCmb19.Location = new System.Drawing.Point(271, 472);
             this.UnitCmb19.Name = "UnitCmb19";
-            this.UnitCmb19.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb19.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb19.TabIndex = 184;
             // 
             // UnitCmb20
@@ -1438,189 +1466,190 @@
             "秒",
             "分",
             "時間"});
-            this.UnitCmb20.Location = new System.Drawing.Point(273, 536);
+            this.UnitCmb20.Location = new System.Drawing.Point(271, 498);
             this.UnitCmb20.Name = "UnitCmb20";
-            this.UnitCmb20.Size = new System.Drawing.Size(54, 21);
+            this.UnitCmb20.Size = new System.Drawing.Size(54, 20);
             this.UnitCmb20.TabIndex = 194;
             // 
             // TimTxt1
             // 
             this.TimTxt1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt1.Location = new System.Drawing.Point(192, 4);
+            this.TimTxt1.Location = new System.Drawing.Point(190, 4);
             this.TimTxt1.Name = "TimTxt1";
-            this.TimTxt1.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt1.Size = new System.Drawing.Size(74, 19);
             this.TimTxt1.TabIndex = 3;
             // 
             // TimTxt2
             // 
             this.TimTxt2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt2.Location = new System.Drawing.Point(192, 32);
+            this.TimTxt2.Location = new System.Drawing.Point(190, 30);
             this.TimTxt2.Name = "TimTxt2";
-            this.TimTxt2.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt2.Size = new System.Drawing.Size(74, 19);
             this.TimTxt2.TabIndex = 13;
             // 
             // TimTxt3
             // 
             this.TimTxt3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt3.Location = new System.Drawing.Point(192, 60);
+            this.TimTxt3.Location = new System.Drawing.Point(190, 56);
             this.TimTxt3.Name = "TimTxt3";
-            this.TimTxt3.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt3.Size = new System.Drawing.Size(74, 19);
             this.TimTxt3.TabIndex = 23;
             // 
             // TimTxt4
             // 
             this.TimTxt4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt4.Location = new System.Drawing.Point(192, 88);
+            this.TimTxt4.Location = new System.Drawing.Point(190, 82);
             this.TimTxt4.Name = "TimTxt4";
-            this.TimTxt4.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt4.Size = new System.Drawing.Size(74, 19);
             this.TimTxt4.TabIndex = 33;
             // 
             // TimTxt5
             // 
             this.TimTxt5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt5.Location = new System.Drawing.Point(192, 116);
+            this.TimTxt5.Location = new System.Drawing.Point(190, 108);
             this.TimTxt5.Name = "TimTxt5";
-            this.TimTxt5.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt5.Size = new System.Drawing.Size(74, 19);
             this.TimTxt5.TabIndex = 43;
             // 
             // TimTxt6
             // 
             this.TimTxt6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt6.Location = new System.Drawing.Point(192, 144);
+            this.TimTxt6.Location = new System.Drawing.Point(190, 134);
             this.TimTxt6.Name = "TimTxt6";
-            this.TimTxt6.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt6.Size = new System.Drawing.Size(74, 19);
             this.TimTxt6.TabIndex = 53;
             // 
             // TimTxt7
             // 
             this.TimTxt7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt7.Location = new System.Drawing.Point(192, 172);
+            this.TimTxt7.Location = new System.Drawing.Point(190, 160);
             this.TimTxt7.Name = "TimTxt7";
-            this.TimTxt7.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt7.Size = new System.Drawing.Size(74, 19);
             this.TimTxt7.TabIndex = 63;
             // 
             // TimTxt8
             // 
             this.TimTxt8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt8.Location = new System.Drawing.Point(192, 200);
+            this.TimTxt8.Location = new System.Drawing.Point(190, 186);
             this.TimTxt8.Name = "TimTxt8";
-            this.TimTxt8.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt8.Size = new System.Drawing.Size(74, 19);
             this.TimTxt8.TabIndex = 73;
             // 
             // TimTxt9
             // 
             this.TimTxt9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt9.Location = new System.Drawing.Point(192, 228);
+            this.TimTxt9.Location = new System.Drawing.Point(190, 212);
             this.TimTxt9.Name = "TimTxt9";
-            this.TimTxt9.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt9.Size = new System.Drawing.Size(74, 19);
             this.TimTxt9.TabIndex = 83;
             // 
             // TimTxt10
             // 
             this.TimTxt10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt10.Location = new System.Drawing.Point(192, 256);
+            this.TimTxt10.Location = new System.Drawing.Point(190, 238);
             this.TimTxt10.Name = "TimTxt10";
-            this.TimTxt10.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt10.Size = new System.Drawing.Size(74, 19);
             this.TimTxt10.TabIndex = 93;
             // 
             // TimTxt11
             // 
             this.TimTxt11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt11.Location = new System.Drawing.Point(192, 284);
+            this.TimTxt11.Location = new System.Drawing.Point(190, 264);
             this.TimTxt11.Name = "TimTxt11";
-            this.TimTxt11.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt11.Size = new System.Drawing.Size(74, 19);
             this.TimTxt11.TabIndex = 103;
             // 
             // TimTxt12
             // 
             this.TimTxt12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt12.Location = new System.Drawing.Point(192, 312);
+            this.TimTxt12.Location = new System.Drawing.Point(190, 290);
             this.TimTxt12.Name = "TimTxt12";
-            this.TimTxt12.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt12.Size = new System.Drawing.Size(74, 19);
             this.TimTxt12.TabIndex = 113;
             // 
             // TimTxt13
             // 
             this.TimTxt13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt13.Location = new System.Drawing.Point(192, 340);
+            this.TimTxt13.Location = new System.Drawing.Point(190, 316);
             this.TimTxt13.Name = "TimTxt13";
-            this.TimTxt13.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt13.Size = new System.Drawing.Size(74, 19);
             this.TimTxt13.TabIndex = 123;
             // 
             // TimTxt14
             // 
             this.TimTxt14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt14.Location = new System.Drawing.Point(192, 368);
+            this.TimTxt14.Location = new System.Drawing.Point(190, 342);
             this.TimTxt14.Name = "TimTxt14";
-            this.TimTxt14.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt14.Size = new System.Drawing.Size(74, 19);
             this.TimTxt14.TabIndex = 133;
             // 
             // TimTxt15
             // 
             this.TimTxt15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt15.Location = new System.Drawing.Point(192, 396);
+            this.TimTxt15.Location = new System.Drawing.Point(190, 368);
             this.TimTxt15.Name = "TimTxt15";
-            this.TimTxt15.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt15.Size = new System.Drawing.Size(74, 19);
             this.TimTxt15.TabIndex = 143;
             // 
             // TimTxt16
             // 
             this.TimTxt16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt16.Location = new System.Drawing.Point(192, 424);
+            this.TimTxt16.Location = new System.Drawing.Point(190, 394);
             this.TimTxt16.Name = "TimTxt16";
-            this.TimTxt16.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt16.Size = new System.Drawing.Size(74, 19);
             this.TimTxt16.TabIndex = 153;
             // 
             // TimTxt17
             // 
             this.TimTxt17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt17.Location = new System.Drawing.Point(192, 452);
+            this.TimTxt17.Location = new System.Drawing.Point(190, 420);
             this.TimTxt17.Name = "TimTxt17";
-            this.TimTxt17.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt17.Size = new System.Drawing.Size(74, 19);
             this.TimTxt17.TabIndex = 163;
             // 
             // TimTxt18
             // 
             this.TimTxt18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt18.Location = new System.Drawing.Point(192, 480);
+            this.TimTxt18.Location = new System.Drawing.Point(190, 446);
             this.TimTxt18.Name = "TimTxt18";
-            this.TimTxt18.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt18.Size = new System.Drawing.Size(74, 19);
             this.TimTxt18.TabIndex = 173;
             // 
             // TimTxt19
             // 
             this.TimTxt19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt19.Location = new System.Drawing.Point(192, 508);
+            this.TimTxt19.Location = new System.Drawing.Point(190, 472);
             this.TimTxt19.Name = "TimTxt19";
-            this.TimTxt19.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt19.Size = new System.Drawing.Size(74, 19);
             this.TimTxt19.TabIndex = 183;
             // 
             // TimTxt20
             // 
             this.TimTxt20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimTxt20.Location = new System.Drawing.Point(192, 536);
+            this.TimTxt20.Location = new System.Drawing.Point(190, 498);
             this.TimTxt20.Name = "TimTxt20";
-            this.TimTxt20.Size = new System.Drawing.Size(74, 20);
+            this.TimTxt20.Size = new System.Drawing.Size(74, 19);
             this.TimTxt20.TabIndex = 193;
             // 
             // PauseCmb1
             // 
             this.PauseCmb1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PauseCmb1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PauseCmb1.FormattingEnabled = true;
             this.PauseCmb1.Items.AddRange(new object[] {
             "無",
             "有"});
-            this.PauseCmb1.Location = new System.Drawing.Point(334, 4);
+            this.PauseCmb1.Location = new System.Drawing.Point(332, 4);
             this.PauseCmb1.Name = "PauseCmb1";
-            this.PauseCmb1.Size = new System.Drawing.Size(57, 21);
+            this.PauseCmb1.Size = new System.Drawing.Size(61, 20);
             this.PauseCmb1.TabIndex = 5;
             // 
             // ClsBtn
             // 
             this.ClsBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ClsBtn.Location = new System.Drawing.Point(335, 356);
+            this.ClsBtn.Location = new System.Drawing.Point(335, 375);
             this.ClsBtn.Name = "ClsBtn";
-            this.ClsBtn.Size = new System.Drawing.Size(75, 25);
+            this.ClsBtn.Size = new System.Drawing.Size(75, 23);
             this.ClsBtn.TabIndex = 302;
             this.ClsBtn.Text = "戻る";
             this.ClsBtn.UseVisualStyleBackColor = true;
@@ -1629,9 +1658,9 @@
             // AllDelBtn
             // 
             this.AllDelBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AllDelBtn.Location = new System.Drawing.Point(117, 356);
+            this.AllDelBtn.Location = new System.Drawing.Point(117, 375);
             this.AllDelBtn.Name = "AllDelBtn";
-            this.AllDelBtn.Size = new System.Drawing.Size(75, 25);
+            this.AllDelBtn.Size = new System.Drawing.Size(75, 23);
             this.AllDelBtn.TabIndex = 300;
             this.AllDelBtn.Text = "全削除";
             this.AllDelBtn.UseVisualStyleBackColor = true;
@@ -1640,9 +1669,9 @@
             // SetBtn
             // 
             this.SetBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SetBtn.Location = new System.Drawing.Point(226, 356);
+            this.SetBtn.Location = new System.Drawing.Point(226, 375);
             this.SetBtn.Name = "SetBtn";
-            this.SetBtn.Size = new System.Drawing.Size(75, 25);
+            this.SetBtn.Size = new System.Drawing.Size(75, 23);
             this.SetBtn.TabIndex = 301;
             this.SetBtn.Text = "設定";
             this.SetBtn.UseVisualStyleBackColor = true;
@@ -1652,9 +1681,9 @@
             // 
             this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(85, 17);
+            this.label32.Location = new System.Drawing.Point(85, 64);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(48, 13);
+            this.label32.Size = new System.Drawing.Size(49, 12);
             this.label32.TabIndex = 23;
             this.label32.Text = "温度(℃)";
             // 
@@ -1662,9 +1691,9 @@
             // 
             this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(157, 17);
+            this.label33.Location = new System.Drawing.Point(157, 64);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(61, 13);
+            this.label33.Size = new System.Drawing.Size(59, 12);
             this.label33.TabIndex = 24;
             this.label33.Text = "湿度(%RH)";
             // 
@@ -1672,9 +1701,9 @@
             // 
             this.label34.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(242, 17);
+            this.label34.Location = new System.Drawing.Point(242, 64);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(55, 13);
+            this.label34.Size = new System.Drawing.Size(53, 12);
             this.label34.TabIndex = 25;
             this.label34.Text = "更新時間";
             // 
@@ -1682,9 +1711,9 @@
             // 
             this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(323, 17);
+            this.label35.Location = new System.Drawing.Point(323, 64);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(31, 13);
+            this.label35.Size = new System.Drawing.Size(29, 12);
             this.label35.TabIndex = 26;
             this.label35.Text = "単位";
             // 
@@ -1692,43 +1721,129 @@
             // 
             this.label36.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(33, 17);
+            this.label36.Location = new System.Drawing.Point(33, 64);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(35, 13);
+            this.label36.Size = new System.Drawing.Size(33, 12);
             this.label36.TabIndex = 4;
             this.label36.Text = "STEP";
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(59, 355);
+            this.button1.Location = new System.Drawing.Point(59, 375);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 25);
+            this.button1.Size = new System.Drawing.Size(43, 23);
             this.button1.TabIndex = 303;
             this.button1.Text = "読込";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // errorProvider1
+            // errorProvider
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.errorProvider.ContainerControl = this;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(379, 17);
+            this.label2.Location = new System.Drawing.Point(379, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.Size = new System.Drawing.Size(35, 12);
             this.label2.TabIndex = 304;
             this.label2.Text = "ポーズ";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 12);
+            this.label3.TabIndex = 305;
+            this.label3.Text = "パターン名";
+            // 
+            // PatternTxt
+            // 
+            this.PatternTxt.Location = new System.Drawing.Point(83, 7);
+            this.PatternTxt.Name = "PatternTxt";
+            this.PatternTxt.Size = new System.Drawing.Size(190, 19);
+            this.PatternTxt.TabIndex = 310;
+            // 
+            // PatternReadBtn
+            // 
+            this.PatternReadBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PatternReadBtn.Location = new System.Drawing.Point(281, 5);
+            this.PatternReadBtn.Name = "PatternReadBtn";
+            this.PatternReadBtn.Size = new System.Drawing.Size(84, 23);
+            this.PatternReadBtn.TabIndex = 311;
+            this.PatternReadBtn.Text = "パターン読込";
+            this.PatternReadBtn.UseVisualStyleBackColor = true;
+            this.PatternReadBtn.Click += new System.EventHandler(this.PatternReadBtn_Click);
+            // 
+            // PatternWriteBtn
+            // 
+            this.PatternWriteBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PatternWriteBtn.Location = new System.Drawing.Point(371, 5);
+            this.PatternWriteBtn.Name = "PatternWriteBtn";
+            this.PatternWriteBtn.Size = new System.Drawing.Size(84, 23);
+            this.PatternWriteBtn.TabIndex = 312;
+            this.PatternWriteBtn.Text = "パターン書込";
+            this.PatternWriteBtn.UseVisualStyleBackColor = true;
+            this.PatternWriteBtn.Click += new System.EventHandler(this.PatternWriteBtn_Click);
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.DefaultExt = "ptn";
+            this.openFileDialog.FileName = "openFileDialog1";
+            this.openFileDialog.Filter = "パターンファイル|*.ptn";
+            // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.DefaultExt = "ptn";
+            this.saveFileDialog.Filter = "パターンファイル|*.ptn";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 38);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 12);
+            this.label4.TabIndex = 313;
+            this.label4.Text = "運転繰返し回数";
+            // 
+            // numericUpDown
+            // 
+            this.numericUpDown.Location = new System.Drawing.Point(115, 34);
+            this.numericUpDown.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown.Name = "numericUpDown";
+            this.numericUpDown.Size = new System.Drawing.Size(41, 19);
+            this.numericUpDown.TabIndex = 314;
+            this.numericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // ProgOpeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 380);
+            this.ClientSize = new System.Drawing.Size(484, 401);
+            this.Controls.Add(this.numericUpDown);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.PatternWriteBtn);
+            this.Controls.Add(this.PatternReadBtn);
+            this.Controls.Add(this.PatternTxt);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label35);
@@ -1744,9 +1859,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(500, 419);
+            this.MaximumSize = new System.Drawing.Size(500, 440);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(500, 419);
+            this.MinimumSize = new System.Drawing.Size(500, 440);
             this.Name = "ProgOpeForm";
             this.Text = "プログラム運転設定値入力";
             this.Deactivate += new System.EventHandler(this.Form1_Deactivate);
@@ -1758,7 +1873,8 @@
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1884,7 +2000,7 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.ComboBox PauseCmb1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox PauseCmb20;
@@ -1906,6 +2022,14 @@
         private System.Windows.Forms.ComboBox PauseCmb4;
         private System.Windows.Forms.ComboBox PauseCmb3;
         private System.Windows.Forms.ComboBox PauseCmb2;
+        private System.Windows.Forms.Button PatternWriteBtn;
+        private System.Windows.Forms.Button PatternReadBtn;
+        private System.Windows.Forms.TextBox PatternTxt;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.NumericUpDown numericUpDown;
+        private System.Windows.Forms.Label label4;
 	}
 }
 

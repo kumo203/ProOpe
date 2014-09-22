@@ -33,6 +33,7 @@ namespace ProgOpe
         const int STEP_OFFSET = 50;
         // 2014/08/14 T.Yamanaka 繰り返し回数&ポーズ追加 開始
         const int PAUSE_BIT_POS = 1700;
+        const int REP_POS = 2050;
         // 2014/08/14 T.Yamanaka 繰り返し回数&ポーズ追加 終了
 
         // スケールレンジ
@@ -146,7 +147,7 @@ namespace ProgOpe
             {
                 //  e.Cancel = true;
                 tb.Text = "0";
-                errorProvider1.SetError(tb, errorTxt);
+                errorProvider.SetError(tb, errorTxt);
             }
             else
             {
@@ -154,11 +155,11 @@ namespace ProgOpe
                 {
                     // e.Cancel = true;
                     tb.Text = "0";
-                    errorProvider1.SetError(tb, errorTxt);
+                    errorProvider.SetError(tb, errorTxt);
                 }
                 else
                 {
-                    errorProvider1.SetError(tb, null);
+                    errorProvider.SetError(tb, null);
                 }
             }
         }
@@ -186,7 +187,7 @@ namespace ProgOpe
             {
                 //e.Cancel = true;
                 tb.Text = "0";
-                errorProvider1.SetError(tb, errorTxt);
+                errorProvider.SetError(tb, errorTxt);
             }
             else
             {
@@ -196,11 +197,11 @@ namespace ProgOpe
                 {
                     //e.Cancel = true;
                     tb.Text = "0";
-                    errorProvider1.SetError(tb, errorTxt);
+                    errorProvider.SetError(tb, errorTxt);
                 }
                 else
                 {
-                    errorProvider1.SetError(tb, null);
+                    errorProvider.SetError(tb, null);
                 }
             }
         }
@@ -226,23 +227,23 @@ namespace ProgOpe
             {
                 //  e.Cancel = true;
                 tb.Text = "0";
-                errorProvider1.SetError(tb, errorTxt);
+                errorProvider.SetError(tb, errorTxt);
             }
             else
             {
                 if ( ret <= 0 ) // 湿度設定無し
                 {
-                    errorProvider1.SetError(tb, null);
+                    errorProvider.SetError(tb, null);
                 }
                 else if (ret < MST_MIN || MST_MAX < ret)
                 {
                     // e.Cancel = true;
                     tb.Text = "0";
-                    errorProvider1.SetError(tb, errorTxt);
+                    errorProvider.SetError(tb, errorTxt);
                 }
                 else            // 湿度設定有り
                 {
-                    errorProvider1.SetError(tb, null);
+                    errorProvider.SetError(tb, null);
                 }
             }
         }
@@ -273,12 +274,12 @@ namespace ProgOpe
             foreach (ComboBox cmb in unitCmbs)
             {
                 cmb.SelectedIndex = 0;
-                errorProvider1.SetError(cmb, null);
+                errorProvider.SetError(cmb, null);
             }
             foreach (ComboBox cmb in pauseCmbs)
             {
                 cmb.SelectedIndex = 0;
-                errorProvider1.SetError(cmb, null);
+                errorProvider.SetError(cmb, null);
             }
             ResetTexts(tmpTxts, "0");
             ResetTexts(mstTxts, "0");
@@ -290,7 +291,7 @@ namespace ProgOpe
             foreach (TextBox txt in txts)
             {
                 txt.Text = val;
-                errorProvider1.SetError(txt, null);
+                errorProvider.SetError(txt, null);
             }
         }
 
@@ -873,6 +874,8 @@ namespace ProgOpe
             errs = WriteValues(MST_POS, mstTxts, MST_LOW, MST_HIGH);
             // 時間
             errs = WriteTimeValues();
+            // 繰返し回数
+            errs = WriteRepeatValue();
 
             List<ComboBox> tmps = unitCmbs;
             errs = ClearBits(UNIT_BIT_POS, unitCmbs);
@@ -888,6 +891,24 @@ namespace ProgOpe
             WriteSecTimeValues();
 
             this.Close();
+        }
+
+        private int[] WriteRepeatValue()
+        {
+            int[] errs;
+            string[] writeReg = new string[] { DEV_NAME+"."+WORD_REG_PREFIX+REP_POS };
+            object[] writeVal = new object[] { numericUpDown.Value };
+
+            if (opc.Write(writeReg, writeVal, out errs))
+            {
+                Debug.WriteLine("Set Writing Succeed in WriteTimeValues()");
+            }
+            else
+            {
+                // Log Error
+                DataHelper.ErrorLog("Set Writing Failed in WriteTimeValues()");
+            }
+            return errs;
         }
 
         /// <summary>
@@ -1148,6 +1169,80 @@ namespace ProgOpe
             ReadValues(mstTxts, MST_POS, MST_LOW, MST_HIGH);
             ReadTimeBits();
             ReadTimeValues();
+        }
+
+        private void PatternReadBtn_Click(object sender, EventArgs e)
+        {
+            openFileDialog.FileName = PatternTxt.Text;
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                PatternTxt.Text = Path.GetFileNameWithoutExtension(openFileDialog.FileName);
+
+                string[] lines = File.ReadAllLines(openFileDialog.FileName);
+                if (lines.Length == (tmpTxts.Count + mstTxts.Count + timTxts.Count
+                                      + unitCmbs.Count + pauseCmbs.Count + 1))
+                {
+                    int count = 0;
+                    numericUpDown.Value = Convert.ToInt32(lines[count++]);
+
+                    foreach (var tmp in tmpTxts)
+                    {
+                        tmp.Text = lines[count++];
+                    }
+                    foreach (var mst in mstTxts)
+                    {
+                        mst.Text = lines[count++];
+                    }
+                    foreach (var tim in timTxts)
+                    {
+                        tim.Text = lines[count++];
+                    }
+                    foreach (var uni in unitCmbs)
+                    {
+                        uni.SelectedIndex = Convert.ToInt32(lines[count++]);
+                    }
+                    foreach (var pos in pauseCmbs)
+                    {
+                        pos.SelectedIndex = Convert.ToInt32(lines[count++]);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("読み込まれたパターン・ファイルに誤りがあります。",
+                        "パターンファイル読み込みエラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void PatternWriteBtn_Click(object sender, EventArgs e)
+        {
+            saveFileDialog.FileName = PatternTxt.Text;
+            if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine(numericUpDown.Value.ToString());
+                foreach (var tmp in tmpTxts)
+                {
+                    sb.AppendLine(tmp.Text);
+                }
+                foreach (var mst in mstTxts)
+                {
+                    sb.AppendLine(mst.Text);
+                }
+                foreach (var tim in timTxts)
+                {
+                    sb.AppendLine(tim.Text);
+                }
+                foreach (var uni in unitCmbs)
+                {
+                    sb.AppendLine(uni.SelectedIndex.ToString());
+                }
+                foreach (var pos in pauseCmbs)
+                {
+                    sb.AppendLine(pos.SelectedIndex.ToString());
+                }
+                File.WriteAllText(saveFileDialog.FileName, sb.ToString());
+            }
         }
 
     }

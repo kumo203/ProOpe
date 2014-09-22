@@ -112,9 +112,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="External\ErrorLogs.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="pcdcs.ico" />
   </ItemGroup>
   <ItemGroup>
