@@ -1,0 +1,9 @@
+C:\Users\ytp\Documents\GitHub\ProOpe\bin\Release\ProgOpe.exe.config
+C:\Users\ytp\Documents\GitHub\ProOpe\bin\Release\ProgOpe.exe
+C:\Users\ytp\Documents\GitHub\ProOpe\bin\Release\ProgOpe.pdb
+C:\Users\ytp\Documents\GitHub\ProOpe\bin\Release\DxpSimpleAPI.dll
+C:\Users\ytp\Documents\GitHub\ProOpe\obj\Release\ProgOpe.ProgOpeForm.resources
+C:\Users\ytp\Documents\GitHub\ProOpe\obj\Release\ProgOpe.Properties.Resources.resources
+C:\Users\ytp\Documents\GitHub\ProOpe\obj\Release\ProgOpe.csproj.GenerateResource.Cache
+C:\Users\ytp\Documents\GitHub\ProOpe\obj\Release\ProgOpe.exe
+C:\Users\ytp\Documents\GitHub\ProOpe\obj\Release\ProgOpe.pdb

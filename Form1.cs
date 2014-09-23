@@ -33,7 +33,7 @@ namespace ProgOpe
         const int STEP_OFFSET = 50;
         // 2014/08/14 T.Yamanaka 繰り返し回数&ポーズ追加 開始
         const int PAUSE_BIT_POS = 1700;
-        const int REP_POS = 2050;
+        const int REP_POS = 2051;
         // 2014/08/14 T.Yamanaka 繰り返し回数&ポーズ追加 終了
 
         // スケールレンジ
